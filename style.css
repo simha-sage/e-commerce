@@ -1,0 +1,21 @@
+#root {
+  border: 2px solid red;
+  display: flex;
+  width: 400px;
+  margin: 150px;
+}
+#signUp {
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;
+}
+#signIn {
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;
+}
+.boxButton {
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;
+}

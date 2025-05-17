@@ -1,7 +1,6 @@
 {
   "name": "e-commerce",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +14,12 @@
     "url": "https://github.com/simha-sage/e-commerce/issues"
   },
   "homepage": "https://github.com/simha-sage/e-commerce#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.15.1"
+  }
 }
