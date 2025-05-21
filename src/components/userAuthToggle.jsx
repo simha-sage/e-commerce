@@ -52,7 +52,6 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleSignUp = async (e) => {
-    e.preventDefault();
     const response = await fetch("http://localhost:5000/userSignUp", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -69,7 +68,7 @@ const SignUp = () => {
     <form
       id="signUp"
       onSubmit={(e) => {
-        e.preventDefault;
+        e.preventDefault();
         handleSignUp();
       }}
     >
