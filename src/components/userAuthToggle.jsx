@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const SignIn = () => {
+const SignIn = ({ onLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -15,6 +15,7 @@ const SignIn = () => {
       setEmail("");
       setPassword("");
       window.alert("Login successful");
+      onLogin();
     } else {
       window.alert("Login Unsucessful");
     }
@@ -107,14 +108,14 @@ const SignInButton = ({ onClick }) => (
     <input type="button" value="Login" onClick={onClick} />
   </div>
 );
-const UserAuthToggle = () => {
+const UserAuthToggle = ({ onLogin }) => {
   const [isSignIn, setIsSignIn] = useState(true);
   return (
     <>
       <div id="login_toggle">
         {isSignIn ? (
           <>
-            <SignIn />
+            <SignIn onLogin={onLogin} />
             <SignUpButton onClick={() => setIsSignIn(false)} />
           </>
         ) : (
