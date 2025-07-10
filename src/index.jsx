@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import UserAuthToggle from "./components/userAuthToggle";
 import SellerAuthToggle from "./components/sellerAuthToggle";
 import Home from "./components/home";
+import About from "./components/about";
+import Contact from "./components/contact";
 
 const SwapButton = ({ onClick, label }) => {
   return (
@@ -56,5 +59,19 @@ const Page = () => {
     </>
   );
 };
+const appRoute = createBrowserRouter([
+  {
+    path: "/",
+    element: <Page />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
+  },
+]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Page />);
+root.render(<RouterProvider router={appRoute} />);
