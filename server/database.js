@@ -72,3 +72,16 @@ app.post("/sellerSignIn", async (req, res) => {
   }
   res.json({ message: "Login successful" });
 });
+
+const munnaschema = new mongoose.Schema({
+  order: [String],
+});
+const usermunna = mongoose.model("usermunna", munnaschema);
+app.get("/usermunna", async (req, res) => {
+  try {
+    const data = await usermunna.find();
+    res.json(data[0].order);
+  } catch (e) {
+    res.status(500).json({ err: "failed to fetch" });
+  }
+});

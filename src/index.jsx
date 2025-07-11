@@ -6,6 +6,7 @@ import SellerAuthToggle from "./components/sellerAuthToggle";
 import Home from "./components/home";
 import About from "./components/about";
 import Contact from "./components/contact";
+import Cart from "./components/cart";
 
 const SwapButton = ({ onClick, label }) => {
   return (
@@ -71,6 +72,10 @@ const appRoute = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />,
+  },
+  {
+    path: "/cart",
+    element: <Cart />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
